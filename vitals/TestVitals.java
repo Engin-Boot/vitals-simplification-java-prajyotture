@@ -2,7 +2,6 @@ package vitals;
 public class TestVitals implements AlertVitals{
 	
 	public  boolean vitalsAreOk(int bpm, int spo2, int respRate) {
-		 //	System.out.println("Hello");
 	        boolean bpmVal=bpmChecker(bpm);
 	        boolean spo2Val=spo2Checker(spo2);
 	        boolean respVal=respChecker(respRate);
@@ -13,12 +12,12 @@ public class TestVitals implements AlertVitals{
      
 	public boolean bpmChecker(int bpm) {
 		if (bpm<70) {
-			alertVital("bpm",bpm);
+			alertVital("bpm is low",bpm);
 			return false;
 			
 		}
 		else if(bpm>150) {
-			alertVital("bpm",bpm);
+			alertVital("bpm is High",bpm);
 		return false;
 		
 	}
@@ -47,7 +46,7 @@ public class TestVitals implements AlertVitals{
 	@Override
 	public void alertVital(String vital,int val) {
 		
-		System.out.println("The vital " +vital+  "  has high value that is "+val);
+		System.out.println(vital+ "  with value  " +val);
 	}
 
 	

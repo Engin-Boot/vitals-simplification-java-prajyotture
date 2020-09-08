@@ -2,7 +2,7 @@ package vitals;
 public class TestVitals implements AlertVitals{
 	
 	public  boolean vitalsAreOk(int bpm, int spo2, int respRate) {
-		 	System.out.println("Hello");
+		 //	System.out.println("Hello");
 	        boolean bpmVal=bpmChecker(bpm);
 	        boolean spo2Val=spo2Checker(spo2);
 	        boolean respVal=respChecker(respRate);
